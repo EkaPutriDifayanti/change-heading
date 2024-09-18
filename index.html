@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <h1 id="title">Hello World</h1>
+    <button id="changeText">Click Me</button>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    let clickCount = 0;
+    $('#changeText').click(function(){
+      if (clickCount === 0){
+        $('#title').text('"Success is not the key to happiness. Happiness is the key to success."');
+        clickCount++;
+      } else if (clickCount === 1){
+        $('#title').text('"The only way to do great work is to love what you do."');
+        clickCount++;
+      } else{
+        $('#title').text('Hello World');
+        clickCount = 0;
+      }
+    });
+  </script>
+</body>
+</html>
